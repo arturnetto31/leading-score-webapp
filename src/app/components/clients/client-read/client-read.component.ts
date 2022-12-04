@@ -11,7 +11,7 @@ import { ClientService } from '../client.service';
 export class ClientReadComponent implements OnInit {
 
   clients: Client[];
-  displayedColumns = ['name', 'email', 'telephone', 'age', 'gender', 'action'];
+  displayedColumns = ['name', 'status', 'score'];
 
 
   pageEvent: PageEvent;

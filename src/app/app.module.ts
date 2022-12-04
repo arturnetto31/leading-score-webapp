@@ -32,11 +32,9 @@ import { MatTableModule } from '@angular/material/table';
 import localePt from '@angular/common/locales/pt';
 import  { registerLocaleData } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { ClientUpdateComponent } from './components/clients/client-update/client-update.component';
 import { BookUpdateComponent } from './components/books/book-update/book-update.component';
 import { PurchaseUpdateComponent } from './components/purchases/purchase-update/purchase-update.component';
 import { PurchaseReadUniqueComponent } from './components/purchases/purchase-read/purchase-read-unique/purchase-read-unique.component';
-import { ClientDeleteComponent } from './components/clients/client-delete/client-delete.component';
 import { BookDeleteComponent } from './components/books/book-delete/book-delete.component';
 import { PurchaseDeleteComponent } from './components/purchases/purchase-delete/purchase-delete.component';
 import { BookReadUniqueComponent } from './components/books/book-read/book-read-unique/book-read-unique.component';
@@ -67,11 +65,9 @@ registerLocaleData(localePt);
     ClientReadComponent,
     BookReadComponent,
     PurchaseReadComponent,
-    ClientUpdateComponent,
     BookUpdateComponent,
     PurchaseUpdateComponent,
     PurchaseReadUniqueComponent,
-    ClientDeleteComponent,
     BookDeleteComponent,
     PurchaseDeleteComponent,
     BookReadUniqueComponent

@@ -1,7 +1,6 @@
 export interface Client {
     uuid?: string,
     name: string,
-    age: number | null, 
     status: string,
     score: number ,
     scheduledAppointments: string[],
@@ -10,5 +9,5 @@ export interface Client {
 
 export interface ClientRequest {
     name: string,
-    age: number | null, 
+    age: number | null,
 }

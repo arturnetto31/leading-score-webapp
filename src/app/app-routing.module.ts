@@ -5,8 +5,6 @@ import { BookDeleteComponent } from './components/books/book-delete/book-delete.
 import { BookReadUniqueComponent } from './components/books/book-read/book-read-unique/book-read-unique.component';
 import { BookUpdateComponent } from './components/books/book-update/book-update.component';
 import { ClientCreateComponent } from './components/clients/client-create/client-create.component';
-import { ClientDeleteComponent } from './components/clients/client-delete/client-delete.component';
-import { ClientUpdateComponent } from './components/clients/client-update/client-update.component';
 import { PurchaseCreateComponent } from './components/purchases/purchase-create/purchase-create.component';
 import { PurchaseDeleteComponent } from './components/purchases/purchase-delete/purchase-delete.component';
 import { PurchaseReadUniqueComponent } from './components/purchases/purchase-read/purchase-read-unique/purchase-read-unique.component';
@@ -28,14 +26,6 @@ const routes: Routes = [
   {
     path:"clients/create",
     component: ClientCreateComponent
-  },
-  {
-    path:"clients/update/:uuid",
-    component: ClientUpdateComponent
-  },
-  {
-    path:"clients/delete/:uuid",
-    component: ClientDeleteComponent
   },
   {
     path:"books",
