@@ -1,18 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BookCreateComponent } from './components/books/book-create/book-create.component';
-import { BookDeleteComponent } from './components/books/book-delete/book-delete.component';
-import { BookReadUniqueComponent } from './components/books/book-read/book-read-unique/book-read-unique.component';
-import { BookUpdateComponent } from './components/books/book-update/book-update.component';
 import { ClientCreateComponent } from './components/clients/client-create/client-create.component';
-import { PurchaseCreateComponent } from './components/purchases/purchase-create/purchase-create.component';
-import { PurchaseDeleteComponent } from './components/purchases/purchase-delete/purchase-delete.component';
-import { PurchaseReadUniqueComponent } from './components/purchases/purchase-read/purchase-read-unique/purchase-read-unique.component';
-import { PurchaseUpdateComponent } from './components/purchases/purchase-update/purchase-update.component';
-import { BookCrudComponent } from './views/book-crud/book-crud.component';
+import { AppointmentCrudComponent } from './views/appointment-crud/appointment-crud/appointment-crud.component';
 import { ClientCrudComponent } from './views/client-crud/client-crud.component';
 import { HomeComponent } from './views/home/home.component';
-import { PurchaseCrudComponent } from './views/purchase-crud/purchase-crud.component';
 
 const routes: Routes = [
   {
@@ -28,47 +19,9 @@ const routes: Routes = [
     component: ClientCreateComponent
   },
   {
-    path:"books",
-    component: BookCrudComponent
-  },
-  {
-    path:"books/create",
-    component: BookCreateComponent
-  },
-  {
-    path:"books/update/:uuid",
-    component: BookUpdateComponent
-  },
-  {
-    path:"books/delete/:uuid",
-    component: BookDeleteComponent
-  },
-  {
-    path:"books/:uuid",
-    component: BookReadUniqueComponent
-  },
-  {
-    path:"purchases",
-    component: PurchaseCrudComponent
-  },
-  {
-    path:"purchases/create",
-    component: PurchaseCreateComponent
-  },
-  {
-    path:"purchases/update/:uuid",
-    component: PurchaseUpdateComponent
-  },
-  {
-    path:"purchases/delete/:uuid",
-    component: PurchaseDeleteComponent
-  },
-  {
-    path:"purchases/:uuid",
-    component: PurchaseReadUniqueComponent
-  },
-
-
+    path:"appointments",
+    component: AppointmentCrudComponent
+  }
 ];
 
 @NgModule({

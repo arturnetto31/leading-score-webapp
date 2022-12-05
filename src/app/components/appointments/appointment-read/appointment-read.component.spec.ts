@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PurchaseReadUniqueComponent } from './purchase-read-unique.component';
+import { AppointmentReadComponent } from './appointment-read.component';
 
-describe('PurchaseReadUniqueComponent', () => {
-  let component: PurchaseReadUniqueComponent;
-  let fixture: ComponentFixture<PurchaseReadUniqueComponent>;
+describe('AppointmentReadComponent', () => {
+  let component: AppointmentReadComponent;
+  let fixture: ComponentFixture<AppointmentReadComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PurchaseReadUniqueComponent ]
+      declarations: [ AppointmentReadComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PurchaseReadUniqueComponent);
+    fixture = TestBed.createComponent(AppointmentReadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
