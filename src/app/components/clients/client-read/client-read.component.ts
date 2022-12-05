@@ -12,10 +12,10 @@ export class ClientReadComponent implements OnInit {
 
   clients: Client[];
   displayedColumns = ['name', 'status', 'score'];
+  totalElements = 0;
 
 
   pageEvent: PageEvent;
-  totalElements: number;
 
   constructor(private clientService: ClientService) { }
 
@@ -25,6 +25,7 @@ export class ClientReadComponent implements OnInit {
 
   getAll(){
     this.clientService.read().subscribe(clients => {
+      this.totalElements = clients.length;
       this.clients = clients;
     });
   }
@@ -37,6 +38,7 @@ export class ClientReadComponent implements OnInit {
           dados.push(client);
         }
       }
+      this.totalElements = dados.length;
       this.clients = dados;
     });    
   }
@@ -49,6 +51,7 @@ export class ClientReadComponent implements OnInit {
           dados.push(client);
         }
       }
+      this.totalElements = dados.length;
       this.clients = dados;
     });    
   }
@@ -61,6 +64,7 @@ export class ClientReadComponent implements OnInit {
           dados.push(client);
         }
       }
+      this.totalElements = dados.length;
       this.clients = dados;
     });  
   }
@@ -73,6 +77,7 @@ export class ClientReadComponent implements OnInit {
           dados.push(client);
         }
       }
+      this.totalElements = dados.length;
       this.clients = dados;
     });  
   }

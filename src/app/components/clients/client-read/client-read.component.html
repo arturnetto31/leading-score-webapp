@@ -17,6 +17,7 @@
 </div>
 
 <div class="mat-elevation-z4 container table-container">
+    <div class="quantity"> Quantidade de clientes: {{totalElements}} </div>
     <table mat-table [dataSource]="clients">
 
         <ng-container matColumnDef="name">
@@ -38,12 +39,5 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
     </table>
-    <mat-paginator
-    [length]="totalElements"
-    [pageSize]="5"
-    [pageSizeOptions]="[5,10,25]"
-    (page)="pageEvent = $event; loadClients() ">
-
-    </mat-paginator>
 
 </div>
