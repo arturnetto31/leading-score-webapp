@@ -1,0 +1,11 @@
+button {
+    margin-bottom: 30px;
+    background-color: #e71837;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}

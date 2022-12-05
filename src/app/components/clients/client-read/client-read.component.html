@@ -1,3 +1,21 @@
+<div class="buttons">
+    <button mat-raised-button (click) = "getAll()" >
+        Todos
+    </button>
+    <button mat-raised-button (click) = "getVisitantes()">
+        Visitantes
+    </button>
+    <button mat-raised-button (click) = "getLeads()">
+        Leads
+    </button>
+    <button mat-raised-button (click) = "getAgendaMarcada()" >
+        Agendas Marcadas
+    </button>
+    <button mat-raised-button (click) = "getOrcamentoFechado()">
+        Orçamento Fechado
+    </button>
+</div>
+
 <div class="mat-elevation-z4 container table-container">
     <table mat-table [dataSource]="clients">
 

@@ -20,10 +20,61 @@ export class ClientReadComponent implements OnInit {
   constructor(private clientService: ClientService) { }
 
   ngOnInit(): void {
-    this.clientService.readWithPagination(0,5).subscribe(clients => {
-      this.getTotalElements();
+    this.getAll();
+  }
+
+  getAll(){
+    this.clientService.read().subscribe(clients => {
       this.clients = clients;
     });
+  }
+
+  getVisitantes(): void {
+    this.clientService.read().subscribe(clients => {
+      var dados: Client[] = [];
+      for(let client of clients){
+        if(client.status == "VISITANTE"){
+          dados.push(client);
+        }
+      }
+      this.clients = dados;
+    });    
+  }
+
+  getLeads(): void {
+    this.clientService.read().subscribe(clients => {
+      var dados: Client[] = [];
+      for(let client of clients){
+        if(client.status == "LEAD"){
+          dados.push(client);
+        }
+      }
+      this.clients = dados;
+    });    
+  }
+
+  getAgendaMarcada(): void {
+    this.clientService.read().subscribe(clients => {
+      var dados: Client[] = [];
+      for(let client of clients){
+        if(client.status == "AGENDA_MARCADA"){
+          dados.push(client);
+        }
+      }
+      this.clients = dados;
+    });  
+  }
+
+  getOrcamentoFechado(): void {
+    this.clientService.read().subscribe(clients => {
+      var dados: Client[] = [];
+      for(let client of clients){
+        if(client.status == "ORÇAMENTO_FECHADO"){
+          dados.push(client);
+        }
+      }
+      this.clients = dados;
+    });  
   }
 
   loadClients(): void {

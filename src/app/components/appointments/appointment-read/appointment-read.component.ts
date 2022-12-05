@@ -20,9 +20,17 @@ export class AppointmentReadComponent implements OnInit {
   constructor(private appointmentService: AppointmentService) { }
 
   ngOnInit(): void {
+    this.allAppointments();
+  }
+
+  allAppointments(): void {
     this.appointmentService.read().subscribe(appointments => {
       this.appointments = appointments;
     });
+  }
+
+  getVisitantes(): void {
+
   }
 
 }
